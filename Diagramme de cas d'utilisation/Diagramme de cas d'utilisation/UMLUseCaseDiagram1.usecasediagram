@@ -1,48 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ffb8cc74-c868-492b-a5d7-0533b8af40cb" name="UMLUseCaseDiagram1" linkedPackageId="18e33a05-f93a-4aa5-bde5-8eda75dbd086" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="0a397aa4-52f5-4cf7-a8cf-2cc25c14b903">
-      <profileInstance Id="ca6fc53b-be96-46b1-8e14-b89a80f695e2" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3cf4022b-1e86-4429-b5ce-67ebdf8bdad4">
-      <profileInstance Id="72ffccdd-f514-45bb-8fc6-dcea09164c82" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="9256e8d1-7b31-4879-b869-d52f81837492" name="Utilisateur" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1e21388f-b852-46fa-9986-0e254d1b7782" />
+        <targetEnds>
+          <association Id="22b5f05c-1fa2-4f57-88aa-3eed2de07689" isDerived="false" sourceEndRoleName="Utilisateur" targetEndRoleName="Smartphone" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="201c6442-a575-481e-adc9-e36f71b8a9b6" LastKnownName="Smartphone" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="54c1436a-280c-49fd-9426-a72792751fd1" name="Utilisateur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3e9290a2-8adb-413b-b9ee-1779beb96092" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4c8ab43e-092f-48bf-9db4-31cf17dc18ea" name="Smartphone" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a467c176-8fdb-4c69-b303-7239e6d0830d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9bac5a6e-d71f-41d2-8fc4-7a92aeee2c14" />
+          </association>
+        </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <subsystem Id="201c6442-a575-481e-adc9-e36f71b8a9b6" name="Subsystem1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <subsystem Id="201c6442-a575-481e-adc9-e36f71b8a9b6" name="Smartphone" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e172218e-ee00-4cde-8a0b-6b6fe69ec10c" />
       </subsystem>
     </useCaseModelRootHasTypes>
     <packageHasNamedElement>
-      <useCase Id="5699d833-2c27-405f-89a8-60298c385b11" name="Allumer la lampe" isAbstract="false" isLeaf="false">
+      <useCase Id="5699d833-2c27-405f-89a8-60298c385b11" name="Allumer" isAbstract="false" isLeaf="false">
         <elementDefinition Id="dbb18bf5-7189-488a-b236-894cf730ade6" />
         <subjects>
-          <subsystemMoniker Id="201c6442-a575-481e-adc9-e36f71b8a9b6" LastKnownName="Subsystem1" />
+          <subsystemMoniker Id="201c6442-a575-481e-adc9-e36f71b8a9b6" LastKnownName="Smartphone" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="9985f123-8d67-423d-a0c8-f4eed2c020c6" name="Eteindre la lampe" isAbstract="false" isLeaf="false">
+      <useCase Id="9985f123-8d67-423d-a0c8-f4eed2c020c6" name="Eteindre" isAbstract="false" isLeaf="false">
         <elementDefinition Id="26478ba3-27c8-4322-a9b6-b8f42e3247b9" />
         <subjects>
-          <subsystemMoniker Id="201c6442-a575-481e-adc9-e36f71b8a9b6" LastKnownName="Subsystem1" />
+          <subsystemMoniker Id="201c6442-a575-481e-adc9-e36f71b8a9b6" LastKnownName="Smartphone" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b6d041d5-2e79-495b-931e-b3f866de5d55" name="Subsystem1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="047c4b16-7da3-445f-9721-0cadd5feedd0" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="18e33a05-f93a-4aa5-bde5-8eda75dbd086" name="Diagramme de cas d'utilisation">
     <elementDefinition Id="c99e9313-c350-4cc8-95e3-93e4b129a2a2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0a397aa4-52f5-4cf7-a8cf-2cc25c14b903">
+        <profileInstance Id="ca6fc53b-be96-46b1-8e14-b89a80f695e2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3cf4022b-1e86-4429-b5ce-67ebdf8bdad4">
+        <profileInstance Id="72ffccdd-f514-45bb-8fc6-dcea09164c82" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

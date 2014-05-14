@@ -23,12 +23,54 @@
         Id="1e21388f-b852-46fa-9986-0e254d1b7782"
         name="Utilisateur"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9bac5a6e-d71f-41d2-8fc4-7a92aeee2c14"
+            isDerived="false"
+            sourceEndRoleName="Utilisateur"
+            targetEndRoleName="Smartphone"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="e172218e-ee00-4cde-8a0b-6b6fe69ec10c"
+              LastKnownName="Smartphone"
+              LastKnownLocation="Diagramme de cas d'utilisation.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e9290a2-8adb-413b-b9ee-1779beb96092"
+                  name="Utilisateur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a467c176-8fdb-4c69-b303-7239e6d0830d"
+                  name="Smartphone"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <subsystem
         Id="e172218e-ee00-4cde-8a0b-6b6fe69ec10c"
-        name="Subsystem1"
+        name="Smartphone"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -36,13 +78,13 @@
     <packageHasNamedElement>
       <useCase
         Id="dbb18bf5-7189-488a-b236-894cf730ade6"
-        name="Allumer la lampe"
+        name="Allumer"
         isAbstract="false"
         isLeaf="false">
         <subjects>
           <subsystemMoniker
             Id="e172218e-ee00-4cde-8a0b-6b6fe69ec10c"
-            LastKnownName="Subsystem1"
+            LastKnownName="Smartphone"
             LastKnownLocation="Diagramme de cas d'utilisation.uml" />
         </subjects>
       </useCase>
@@ -50,16 +92,24 @@
     <packageHasNamedElement>
       <useCase
         Id="26478ba3-27c8-4322-a9b6-b8f42e3247b9"
-        name="Eteindre la lampe"
+        name="Eteindre"
         isAbstract="false"
         isLeaf="false">
         <subjects>
           <subsystemMoniker
             Id="e172218e-ee00-4cde-8a0b-6b6fe69ec10c"
-            LastKnownName="Subsystem1"
+            LastKnownName="Smartphone"
             LastKnownLocation="Diagramme de cas d'utilisation.uml" />
         </subjects>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="047c4b16-7da3-445f-9721-0cadd5feedd0"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
